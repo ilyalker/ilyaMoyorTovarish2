@@ -67,4 +67,15 @@ public class Controller {
 
     }
 
-}
+
+
+
+
+
+    @PostMapping("/addStudentInGroupAA")
+    public void addStudentInGroupAAA(@RequestBody AddStudentDTO addStudentDTO) {
+        List<Student> students = studentService.addStudentInGroup(addStudentDTO);
+        studentService.saveAllStudents(students);
+    }
+
+    }
